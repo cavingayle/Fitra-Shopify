@@ -1,0 +1,38 @@
+:root {
+    --main-font: 'Rubik', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    --black: #000000;
+    --white: #FFFFFF;
+    --color-accent: #FF3700;
+    --color-text: #555555;
+  
+    --line-global: 20px;
+    --gutter-global: calc(var(--line-global) * 2);
+  }
+
+  * {
+    font-family: var(--main-font);
+    box-sizing: border-box;
+  }
+  
+  html,
+  body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: var(--black);
+    line-height: var(--line-global);
+  }
+  
+  body {
+    background-color: var(--white);
+  }
+
+/* Utility Classes */
+
+.grid {
+    display: grid;
+    grid-column-gap: var(--gutter-global);
+    grid-row-gap: var(--gutter-global)
+}
+
+/* Index Styles */

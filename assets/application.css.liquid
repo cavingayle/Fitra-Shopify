@@ -1,38 +1,87 @@
 :root {
-    --main-font: 'Rubik', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-    --black: #000000;
-    --white: #FFFFFF;
-    --color-accent: #FF3700;
-    --color-text: #555555;
-  
-    --line-global: 20px;
-    --gutter-global: calc(var(--line-global) * 2);
-  }
+  --main-font: 'Rubik', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  --black: #000000;
+  --white: #ffffff;
+  --color-accent: #ff3700;
+  --color-text: #555555;
 
-  * {
-    font-family: var(--main-font);
-    box-sizing: border-box;
-  }
-  
-  html,
-  body {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    color: var(--black);
-    line-height: var(--line-global);
-  }
-  
-  body {
-    background-color: var(--white);
-  }
+  --line-global: 20px;
+  --gutter-global: calc(var(--line-global) * 2);
+}
+
+* {
+  font-family: var(--main-font);
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: var(--black);
+  line-height: var(--line-global);
+}
+
+body {
+  background-color: var(--white);
+}
 
 /* Utility Classes */
 
 .grid {
-    display: grid;
-    grid-column-gap: var(--gutter-global);
-    grid-row-gap: var(--gutter-global)
+  display: grid;
+  grid-column-gap: var(--gutter-global);
+  grid-row-gap: var(--gutter-global);
 }
 
 /* Index Styles */
+
+.grid {
+  display: grid;
+}
+
+.two-columns {
+  grid-template-columns: 1fr 1fr;
+}
+
+.vallign-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.vallign-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.main-content {
+  min-height: 100vh;
+  padding: var(--gutter-global);
+  width: 50%;
+  margin-left: auto;
+}
+
+.sticky-side-image {
+  position: fixed;
+  left: 0;
+  top: var(--gutter-global);
+  bottom: var(--gutter-global);
+  background: wheat;
+  width: 50%;
+}
+
+.sticky-side-image img {
+    
+}
+
+/* Index Styles */
+
+#product-info {
+  grid-template-rows: minmax(max-content, auto) minmax(min-content, max-content);
+}
+
+.headline {
+  padding-bottom: calc(var(--line-global) * 3);
+}

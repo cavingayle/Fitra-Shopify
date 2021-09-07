@@ -12,14 +12,14 @@
 {% endif %}
 
 <div id="customer_orders">
-  <h2>Orders</h2>
+  <h2>Orderss</h2>
   {% paginate customer.orders by 10 %}
   {% if customer.orders.size != 0 %}
     {% for order in customer.orders %}
       <!-- order details here -->
     {% endfor %}
   {% else %}
-    <p>You haven't placed any orders yet.</p>
+    <p>You haven't placed any orders yetti.</p>
   {% endif %}
   {{ paginate | default_pagination }}
   {% endpaginate %}
